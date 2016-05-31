@@ -17,6 +17,13 @@ Maintained by [Open Exchange Rates](https://openexchangerates.org "Free reliable
 
 ## Changelog
 
+**v0.4.2-f0.1**
+* Code formated & refactored
+* Remove accounting.formatColumn
+* Added multi settings by key (usually language code)
+* Added JSDoc parameters
+* Rename "defaults" to "mergeObjects" & "map" to "_map"
+
 **v0.4.2** - Added bower.json
 
 **v0.4.1** - Alias `accounting.formatNumber()` as `accounting.format()`
