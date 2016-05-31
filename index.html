@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <title>accounting.js: JavaScript number and currency formatting library</title>
-  <link href="demo-resources/style.css" rel="stylesheet"/>
-  <link rel="canonical" href="http://openexchangerates.github.io/accounting.js/" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>accounting.js: JavaScript number and currency formatting library</title>
+    <link href="demo-resources/style.css" rel="stylesheet"/>
+    <link rel="canonical" href="http://openexchangerates.github.io/accounting.js/" />
+  </head>
 
-<body>
-  <section>
-    <h1>accounting.js</h1>
-    <p><strong>accounting.js</strong> is a tiny JavaScript library by <a href="https://openexchangerates.org" title="Open Exchange Rates free currency data API" target="_blank">Open Exchange Rates</a>, providing simple and advanced number, money and currency formatting.</p>
+  <body>
+    <section>
+      <h1>accounting.js</h1>
+      <p><strong>accounting.js</strong> is a tiny JavaScript library by <a href="https://openexchangerates.org" title="Open Exchange Rates free currency data API" target="_blank">Open Exchange Rates</a>, providing simple and advanced number, money and currency formatting.</p>
 
-    <p>Features custom output formats, parsing/unformatting of numbers, easy localisation and spreadsheet-style column formatting (to line up symbols and decimals).</p>
+      <p>Features custom output formats, parsing/unformatting of numbers, easy localisation and spreadsheet-style column formatting (to line up symbols and decimals).</p>
 
-    <p>It's lightweight, has no dependencies and is suitable for all client-side and server-side JavaScript applications.</p>
+      <p>It's lightweight, has no dependencies and is suitable for all client-side and server-side JavaScript applications.</p>
 
-    <p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="josscrowcroft" data-url="http://openexchangerates.github.io/accounting.js" data-text="accounting.js - JavaScript library for money/currency formatting">Tweet</a> &nbsp; <g:plusone size="medium"></g:plusone></p>
+      <p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="josscrowcroft" data-url="http://openexchangerates.github.io/accounting.js" data-text="accounting.js - JavaScript library for money/currency formatting">Tweet</a> &nbsp; <g:plusone size="medium"></g:plusone></p>
     <ul>
       <li><a href="#methods" title="library methods overvew">methods &amp; examples</a>
       <li><a href="#demo" title="demo">demo</a>
@@ -282,17 +282,17 @@ accounting.unformat("&euro; 1.000.000,00", ","); // 1000000</pre>
     <br />
     <hr />
     <p><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="josscrowcroft" data-url="http://openexchangerates.github.io/accounting.js" data-text="accounting.js - JavaScript library for money/currency formatting">Tweet</a> &nbsp; <g:plusone size="medium"></g:plusone></p>
-  </section>
+</section>
 
 
-  <script src="accounting.js"></script>
-  <script src="demo-resources/js/libs/jquery.min.js"></script>
-  <script src="demo-resources/js/prettify.js"></script>
+<script src="accounting.js"></script>
+<script src="demo-resources/js/libs/jquery.min.js"></script>
+<script src="demo-resources/js/prettify.js"></script>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
-    // demo functions:
-    jQuery(document).ready(function($) {
+  // demo functions:
+  jQuery(document).ready(function ($) {
       var numbers = [123.5, 3456.615, 777888.99, -5432, -1234567, 0];
 
 
@@ -301,16 +301,16 @@ accounting.unformat("&euro; 1.000.000,00", ","); // 1000000</pre>
           $demoSymbol = $('#demo-number-symbol'),
           $demoResult = $('#demo-number-result');
 
-      $demoValue.add($demoSymbol).bind('keydown keyup keypress focus blur paste change', function() {
-        var symbol = $demoSymbol.find(':selected').val(),
-            result = accounting.formatMoney(
-              $demoValue.val(),
-              2,
-              symbol,
-              ($demoSymbol.find(':selected').data('locale') === 'european') ? "." : ",",
-              ($demoSymbol.find(':selected').data('locale') === 'european') ? "," : "."
-            );
-        $demoResult.text(result);
+      $demoValue.add($demoSymbol).bind('keydown keyup keypress focus blur paste change', function () {
+          var symbol = $demoSymbol.find(':selected').val(),
+              result = accounting.formatMoney(
+                  $demoValue.val(),
+                  2,
+                  symbol,
+                  ($demoSymbol.find(':selected').data('locale') === 'european') ? "." : ",",
+                  ($demoSymbol.find(':selected').data('locale') === 'european') ? "," : "."
+                  );
+          $demoResult.text(result);
       });
 
 
@@ -319,10 +319,10 @@ accounting.unformat("&euro; 1.000.000,00", ","); // 1000000</pre>
           $columnOutputs = $('#demo-column').find('.output'),
           $columnOutputs2 = $('#demo-column').find('.output2');
 
-    });
+  });
 
-    // prettify:
-    prettyPrint();
-  </script>
+  // prettify:
+  prettyPrint();
+</script>
 </body>
 </html>
